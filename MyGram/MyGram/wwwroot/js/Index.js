@@ -1,8 +1,8 @@
 ﻿var divContainer = $("#MainContainer");
 
 $("<span></span>").text("My Gram").appendTo(divContainer);
-$("<button></button>").text("Log In").appendTo(divContainer);
-$("<button></button>").text("Sign Up").appendTo(divContainer);
+$("<button></button>").attr("id", "LogIn").text("Log In").appendTo(divContainer);
+$("<button></button>").attr("id", "SignUp").text("Sign Up").appendTo(divContainer);
 
 $("<br>").appendTo(divContainer);
 $("<br>").appendTo(divContainer);
@@ -26,3 +26,12 @@ $("<br>").appendTo(divContainer);
 $("<span></span>").text("English").css("margin-right", "10px").appendTo(divContainer);
 $("<span></span>").text("2021").css("margin-right", "10px").appendTo(divContainer);
 $("<span></span>").text("MyGram").css("margin-right", "10px").appendTo(divContainer);
+
+$("#LogIn").click(function () {
+    alert("You Have Logged In");
+});
+$("#LogIn").click(function () {
+    $("<span></span>").text("User").css("margin-right", "10px").appendTo(divContainer);
+    $("<span></span>").text("Password").css("margin-right", "10px").appendTo(divContainer);
+
+});
