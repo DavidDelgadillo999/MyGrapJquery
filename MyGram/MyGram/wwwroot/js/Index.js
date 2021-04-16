@@ -12,7 +12,6 @@ $("<span></span>").text("Image 2").css("margin-right", "10px").appendTo(divConta
 $("<span></span>").text("Image 3").css("margin-right", "10px").appendTo(divContainer);
 $("<span></span>").text("Image 4").css("margin-right", "10px").appendTo(divContainer);
 $("<span></span>").text("Image 5").css("margin-right", "10px").appendTo(divContainer);
-
 $("<br>").appendTo(divContainer);
 $("<br>").appendTo(divContainer);
 
@@ -31,7 +30,28 @@ $("#LogIn").click(function () {
     alert("You Have Logged In");
 });
 $("#LogIn").click(function () {
-    $("<span></span>").text("User").css("margin-right", "10px").appendTo(divContainer);
-    $("<span></span>").text("Password").css("margin-right", "10px").appendTo(divContainer);
-
+    $("#UserInputForm").show();
 });
+
+$("#UserInputForm").hide();
+
+
+ $(document).ready(function () {
+    $('form[name="UserInputForm"]').validate({
+        rules: {
+            User: "required",
+            Password: "required"
+        },
+        messages: {
+            User: "User is required",
+            Password: "Password is required"
+        },
+        submitHandler: function (form) {
+            var user = $("#User").val();
+            var password = $("#Password").val();
+
+            alert("The user you submitted was: " + user +
+                "and the password is:" + password);
+        }
+    });
+})
