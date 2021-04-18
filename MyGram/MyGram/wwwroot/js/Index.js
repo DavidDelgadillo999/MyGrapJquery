@@ -36,7 +36,7 @@ $("#LogIn").click(function () {
 $("#UserInputForm").hide();
 
 
- $(document).ready(function () {
+$(document).ready(function () {
     $('form[name="UserInputForm"]').validate({
         rules: {
             User: "required",
@@ -50,8 +50,18 @@ $("#UserInputForm").hide();
             var user = $("#User").val();
             var password = $("#Password").val();
 
-            alert("The user you submitted was: " + user +
-                "and the password is:" + password);
+            $.when($.ajax({
+                url: "/Home/Register",
+                type: "POST",
+                data: {
+                    User: user,
+                    Password: password
+                }
+            })).then(function (data) {
+                if (data == true) {
+                    alert("The user was registered");
+                }
+            });
         }
     });
-})
+});
