@@ -56,10 +56,12 @@ $(document).ready(function () {
                 data: {
                     User: user,
                     Password: password
-                }
+                },
+                datatype: "json"
             })).then(function (data) {
-                if (data == true) {
-                    alert("The user was registered");
+                console.log(data);
+                if (data != null && data.registerMessage!="") {
+                    alert(data.registerMessage);
                 }
             });
         }

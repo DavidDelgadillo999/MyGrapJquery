@@ -28,11 +28,16 @@ namespace MyGram.Controllers
             return View();
         }
 
-        public bool Register(string User, string Password)
+        public IActionResult Register(string User, string Password)
         {
+
+            User user = new User();
+            user.UserName = User;
+            user.Password = Password;
+            user.RegisterMessage = $"The user is {User} and the password is {Password}";
             string result = $"The user is {User} and the password is {Password}";
 
-            return true; 
+            return Json(user); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
