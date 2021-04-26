@@ -61,7 +61,14 @@ $(document).ready(function () {
             })).then(function (data) {
                 console.log(data);
                 if (data != null && data.registerMessage!="") {
-                    alert(data.registerMessage);
+
+                    $.toast({
+                        heading: "Success",
+                        text: data.registerMessage,
+                        icon: "success",
+                        loader: true,
+                        loaderBg: "blue"
+                    })
                 }
             });
         }
