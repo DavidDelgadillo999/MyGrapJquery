@@ -7,11 +7,10 @@ $("<button></button>").attr("id", "SignUp").text("Sign Up").appendTo(divContaine
 $("<br>").appendTo(divContainer);
 $("<br>").appendTo(divContainer);
 
-$("<span></span>").text("Image 1").css("margin-right", "10px").appendTo(divContainer);
-$("<span></span>").text("Image 2").css("margin-right", "10px").appendTo(divContainer);
-$("<span></span>").text("Image 3").css("margin-right", "10px").appendTo(divContainer);
-$("<span></span>").text("Image 4").css("margin-right", "10px").appendTo(divContainer);
-$("<span></span>").text("Image 5").css("margin-right", "10px").appendTo(divContainer);
+var imageContainer = $("<div></div>").attr("id", "ImageContainer").appendTo(divContainer);
+var table = $("<table></table>").attr("id", "divContainer").appendTo(divContainer);
+$("<tbody></tbody>").attr("id", "ImageBodyContainer").appendTo(table);
+
 $("<br>").appendTo(divContainer);
 $("<br>").appendTo(divContainer);
 
@@ -73,4 +72,30 @@ $(document).ready(function () {
             });
         }
     });
+
+    $.when($.ajax({
+        url: "/Home/GetAllImages",
+        method: "GET"
+    })).then(function (data) {
+        var image = null;
+        var tbody = $("ImageBodyCOntainer");
+        var tr = $("<tr></tr>");
+        var td = null;
+
+        for (var element in data) {
+            if (counter == 5) {
+                tr = $("ImageBodyCOntainer");
+                counter = 0;
+            }
+            image = data[element];
+
+        td = $ $("<td></td>");
+
+        
+        $("<span></span>").text(image.imageAlt)
+            .css("margin-right", "10px).appendTo(td);
+                tr.append(td);
+            counter++;
+                }
+    })
 });
