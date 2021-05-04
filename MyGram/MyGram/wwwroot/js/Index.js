@@ -78,24 +78,28 @@ $(document).ready(function () {
         method: "GET"
     })).then(function (data) {
         var image = null;
-        var tbody = $("ImageBodyCOntainer");
+        var tbody = $("#ImageBodyContainer");
         var tr = $("<tr></tr>");
         var td = null;
+        var counter = 0;
 
         for (var element in data) {
             if (counter == 5) {
-                tr = $("ImageBodyCOntainer");
+                tbody.append(tr);
+                tr = $("<tr></tr>");
                 counter = 0;
             }
+
             image = data[element];
 
-        td = $ $("<td></td>");
-
+            td = $("<td></td>");
         
-        $("<span></span>").text(image.imageAlt)
-            .css("margin-right", "10px).appendTo(td);
-                tr.append(td);
+            $("<span></span>").text(image.imageAlt)
+                .css("margin-right", "10px").appendTo(td);
+            tr.append(td);
             counter++;
-                }
+        }
+
+        tbody.append(tr);
     })
 });

@@ -7,8 +7,8 @@ namespace MyGram.Models
         {
         }
         public int ImageId { get; set; }
-        public int ImageAlt { get; set; }
-        public int ImagePath { get; set; }
-        public int Description { get; set; }
+        public string ImageAlt { get; set; }
+        public string ImagePath { get; set; }
+        public string Description { get; set; }
     }
 }
