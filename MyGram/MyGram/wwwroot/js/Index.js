@@ -82,6 +82,7 @@ $(document).ready(function () {
         var tr = $("<tr></tr>");
         var td = null;
         var counter = 0;
+        var text = "Image Saved"
 
         for (var element in data) {
             if (counter == 5) {
