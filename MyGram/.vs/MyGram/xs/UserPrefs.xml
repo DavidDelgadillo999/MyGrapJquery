@@ -1,15 +1,32 @@
 ﻿<Properties StartupConfiguration="{9AB9E172-441B-4D55-A76F-2890C058911B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyGram/wwwroot/js/Index.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyGram/Views/Home/CalendarView.cshtml">
     <Files>
-      <File FileName="MyGram/Startup.cs" Line="26" Column="76" />
-      <File FileName="MyGram/Views/Home/Index.cshtml" />
-      <File FileName="MyGram/wwwroot/js/Index.js" Line="73" Column="10" />
-      <File FileName="MyGram/Views/Shared/_Layout.cshtml" />
-      <File FileName="MyGram/Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="MyGram/Controllers/HomeController.cs" />
-      <File FileName="MyGram/Models/User.cs" />
-      <File FileName="MyGram/Models/Image.cs" />
+      <File FileName="MyGram/Views/Home/CalendarView.cshtml" Line="8" Column="48" />
+      <File FileName="MyGram/wwwroot/css/Index.css" Line="1" Column="1" />
+      <File FileName="MyGram/wwwroot/css/SignUp (copy).css" Line="48" Column="11" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyGram" expanded="True">
+            <Node name="MyGram" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="CalendarView.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

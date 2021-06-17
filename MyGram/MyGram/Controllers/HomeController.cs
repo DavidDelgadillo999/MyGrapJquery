@@ -193,4 +193,8 @@ namespace MyGram.Controllers
         else {"$#
 
     }
+        public IActionResult CalendarView
+        {
+
+        }
 }

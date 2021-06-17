@@ -1,0 +1,32 @@
+﻿body {
+}
+
+
+.FlexRow {
+    display flex
+}
+
+
+
+
+
+
+
+.FullRow {
+    width: 82%;
+}
+
+
+.FullRow select {
+
+    width: 100%;
+}
+
+@media only screen and (max-width: 401px) 
+    .FlexRow {
+    flex-direction: row;
+    }
+.ColumnLabels {
+    width:
+}
+    

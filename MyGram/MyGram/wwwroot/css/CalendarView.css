@@ -1,0 +1,49 @@
+﻿.FontBold {
+    font-weight: bold;
+
+}
+
+#MainCalendar
+
+
+
+#Calendar
+
+
+.CalendarHeaderRow {
+    display:: after flex;
+    flex-direction: row;
+}
+
+.FlexItem {
+    width: 14.28%;
+    display: flex;
+    justify
+}
+
+#Calendar {
+    font-size: 1rem
+}
+
+
+.WeekDay {
+    width: 14.28%;
+    border-style:
+    border-width:
+    border-color: black;
+
+}
+
+.DayClass {
+    display: flex;
+    justify-content:flex-end;
+}
+
+.Event {
+    background-color: dodgerblue;
+    color: white;
+    border-radious: 1px;
+    padding: 5px;
+    font-size: 0.8rem;
+    width:
+}

@@ -1,0 +1,10 @@
+﻿using System;
+namespace MyGram.wwwroot.css
+{
+    public class Index
+    {
+        public Index()
+        {
+        }
+    }
+}
